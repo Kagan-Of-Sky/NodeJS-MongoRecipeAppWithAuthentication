@@ -1,0 +1,19 @@
+head
+	link(rel="stylesheet", type="text/css", href="/style.css")
+body
+	h1 Please log in...
+	if warning
+		p=warning
+
+	form(action="/login", method="POST")
+		label(for='username') Name:
+		input#username(name='username')
+		br
+		label(for='password') Password:
+		input#password(name='password')
+		br
+		input(type='submit', value="Log in")#send
+
+	p
+		| New users 
+		a(href="/register") click here.

@@ -1,0 +1,49 @@
+doctype html
+
+html(lang="en")
+	head
+		title Mark's RecipeViewer 3000(tm)
+
+		link(rel="icon", href="/favicon.ico?", type="image/x-icon")
+
+		link(rel="stylesheet", type="text/css", href="style.css")
+
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+		script(src="recipePage.js")
+
+	body
+		h1 Mark's Patented RecipeViewer 3000
+			sup tm
+				sup c
+					sup r
+
+		div#recipeSelectContainer
+			label(for="recipeSelect") Select a recipe:
+			select#recipeSelect
+			button#recipeViewButton View
+
+		hr
+
+		form
+			label(for="recipeName") Recipe Name:
+			input#recipeName(type="text", placeholder="Recipe Name")
+			br
+
+			label(for="recipeDuration") Duration:
+			input#recipeDuration(type="text", placeholder="Recipe Duration")
+			br
+
+			label(for="recipeIngredients") Ingredients:
+			textarea#recipeIngredients(placeholder="Recipe Ingredients")
+			br
+
+			label(for="recipeDirections") Steps:
+			textarea#recipeDirections(placeholder="Recipe Directions")
+			br
+
+			label(for="recipeNotes") Notes:
+			textarea#recipeNotes(placeholder="Extra notes")
+			br
+
+		button#recipeSubmitButton() Submit!
+		div#confirmed &#9989;

@@ -1,0 +1,20 @@
+head
+	title Register
+	link(rel="stylesheet", type="text/css", href="/style.css")
+body
+	h1 Register a new username/password..
+	if warning
+		p=warning
+
+	form(action="/register", method="POST")
+		label(for='username') Name:
+		input#username(name='username')
+		br
+		label(for='password') Password:
+		input#password(name='password')
+		br
+		input(type='submit', value="Submit")#register
+
+		p
+			| Already have an account?
+			a(href="/login") click here.
